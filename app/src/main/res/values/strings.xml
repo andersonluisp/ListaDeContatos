@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ListaDeContatos2</string>
+    <string name="string_iv_photograph_content_description"></string>
 </resources>
