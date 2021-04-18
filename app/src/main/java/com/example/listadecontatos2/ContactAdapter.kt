@@ -3,7 +3,10 @@ package com.example.listadecontatos2
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 
 class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ContactAdapterViewHolder>() {
 
@@ -28,12 +31,21 @@ class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ContactAdapterViewHol
         return list.size
     }
 
+    fun updateList(list: List<Contact>){
+        this.list.clear()
+        this.list.addAll(list)
+        notifyDataSetChanged()  //  Notifica o adapter que a lista que precisa fazer a renderização foi modificada
+    }
+
     //Gerencia cada item da lista
     class ContactAdapterViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview){
-
+        private val tvName: TextView = itemView.findViewById(R.id.tv_name)
+        private val tvPhone: TextView = itemView.findViewById(R.id.tv_phone)
+        private val ivPhotoraph: ImageView = itemView.findViewById(R.id.iv_photograph)
 
         fun bind(contact: Contact) {
-
+            tvName.text = contact.name
+            tvPhone.text = contact.phone
         }
     }
 }
