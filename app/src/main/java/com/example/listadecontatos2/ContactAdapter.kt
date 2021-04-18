@@ -13,15 +13,24 @@ class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ContactAdapterViewHol
         TODO("Not yet implemented")
     }
 
+    //Rodar em cada item do Array, obter o valor em cada item e preencher na tela.
+    // Vai popular o item no recycler view
     override fun onBindViewHolder(holder: ContactAdapterViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        //Precisa passar por todos os itens gerenciaods pela class ContactAdapterViewHolder
+        holder.bind(list[position])
     }
 
+    //Quantidade de itens que existe na lista que estamos passando
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return list.size
     }
 
+    //Gerencia cada item da lista
     class ContactAdapterViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview){
 
+
+        fun bind(contact: Contact) {
+
+        }
     }
 }
