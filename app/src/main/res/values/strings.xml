@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ListaDeContatos2</string>
     <string name="string_iv_photograph_content_description"></string>
+
+    <string name="menu_1">Menu 1</string>
+    <string name="menu_2">Menu 2</string>
 </resources>
