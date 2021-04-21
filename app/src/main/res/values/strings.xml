@@ -10,4 +10,6 @@
 
     <string name="open_drawer">Abrir</string>
     <string name="close_drawer">Fechar</string>
+    <string name="menudrawer_1">Menu Drawer 1</string>
+    <string name="menudrawer_2">Menu Drawer 2</string>
 </resources>

@@ -12,6 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
     private val rvList: RecyclerView by lazy {
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         initDrawer()
         bindViews()
         updateList()
+        clickDrawerMenuItems()
 
     }
 
@@ -83,6 +85,17 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun clickDrawerMenuItems(){
+        val navview = findViewById<View>(R.id.nav_view) as NavigationView
+        navview.setNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.item_menudrawer_1 -> showtoast("Item 1 Menu Drawer")
+                R.id.item_menudrawer_2 -> showtoast("Item 2 Menu Drawer")
+            }
+            true
         }
     }
 }
